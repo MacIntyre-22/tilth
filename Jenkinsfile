@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	environment {
 		CONTAINER_NAME = "tilth-website-${env.BRANCH_NAME}"
-		PORT = "${env.BRANCH_NAME == 'development' ? '8001' : '8000'}"
+		PORT = "${env.BRANCH_NAME == 'development' ? '8001' : '8002'}"
 	}
 	stages {
 		stage('fetch') {

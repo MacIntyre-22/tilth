@@ -22,7 +22,7 @@ pipeline {
 			steps {
 				sh """
 				docker stop ${CONTAINER_NAME} || true && docker rm ${CONTAINER_NAME} || true
-				docker run -dit --name ${CONTAINER_NAME} -p ${env.BRANCH_NAME == 'main' ? '8000' : '8001'}:80 ${CONTAINER_NAME}"""
+				docker run -dit --name ${CONTAINER_NAME} -p ${env.BRANCH_NAME == 'main' ? '8002' : '8001'}:80 ${CONTAINER_NAME}"""
 			}
 		}
 		stage('cleanup') {
